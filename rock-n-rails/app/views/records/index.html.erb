@@ -1,0 +1,9 @@
+<h1>Rock n Rails</h1>
+
+<% @records.each do |record| %>
+  <p>Title: <%= record.title %></p>
+  <p>Artist: <%= record.artist %></p>
+  <img src="<%= record.cover_art %>" height="300" width="300" alt="Album Cover" />
+  <!-- USING THE NEW WAY TO LINK TO OTHER PAGES USING RAILS -->
+  <%= link_to "Show page", record_path(record) %>
+<% end %>
